@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Book Manager</title>
-        <meta charset="UTF-8">
-        <meta name="author" content="rrdas">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css">
-    </head>
-    <body>
-        <header>
-            <div class="backdrop">
-                    <h1>Book Manager</h1>
+<head>
+    <title>Book Manager</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="rrdas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="backdrop">
+            <h1>Book Manager</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="nav-bar">
+            <a href="#home">Home</a>
+            <a href="#cr">Currently Reading</a>
+            <a href="#add-book">Add Book</a>
+        </section>
+
+        <section id="home">
+            <h2>Welcome to the Book Manager</h2>
+            <p>Manage your reading list and keep track of the books you've read.</p>
+
+            <div id="cr">
+                <h3>Currently Reading</h3>
+                <p id="no-book">No books currently being read.</p>
             </div>
-        </header>
-        <main>
-            <section class="nav-bar">
-                <a href="#home">Home</a>
-                <a href="#add-book">Add Book</a>
-                <a href="#view-books">View Books</a>
+
+            <section class="available-books">
+                <h3>Books Available</h3>
             </section>
-            <section id="home">
-                <h2>Welcome to the Book Manager</h2>
-                <p>Manage your reading list and keep track of the books you've read.</p>
+
+            <section id="add-book">
+                <button id="add-book-btn" type="button">Add New Book</button>
+
+                <form id="add-book-form">
+                    <label for="book-file">Select Book File</label>
+                    <input type="file" id="book-file" required>
+
+                    <button type="submit">Add Book</button>
+                    <button type="button" id="cancel-add-book">Cancel</button>
+                </form>
             </section>
-        </main>
-    </body>
+        </section>
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
 </html>
